@@ -15,7 +15,7 @@ a{color:inherit;text-decoration:none}
 .shade{position:fixed;inset:0;z-index:0;background:linear-gradient(90deg,rgba(5,11,31,.96) 0,rgba(5,11,31,.7) 45%,rgba(5,11,31,.25) 100%);pointer-events:none}
 header{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw 16px 88px;background:rgba(5,11,31,.88);border-bottom:1px solid var(--line)}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px}.logo img{height:26px}
-nav{display:flex;gap:30px;font-size:14px;font-weight:500;color:var(--mut)}nav a:hover{color:#fff}
+.header-actions{display:flex;align-items:center;gap:12px}.email-icon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--line);border-radius:4px;color:var(--mut)}.email-icon:hover{color:#fff;border-color:var(--sky)}.email-icon:focus-visible{outline:2px solid var(--sky);outline-offset:3px}.email-icon svg{width:22px;height:22px}nav{display:flex;gap:30px;font-size:14px;font-weight:500;color:var(--mut)}nav a:hover{color:#fff}
 .btn{display:inline-block;padding:13px 26px;border-radius:4px;font-weight:700;font-size:14px;border:1px solid var(--line);transition:background .2s,border-color .2s}
 .btn.p{background:var(--blue);border-color:var(--blue);color:#fff}.btn.p:hover{background:#3a85ff}
 .btn.g:hover{border-color:var(--sky)}
@@ -85,7 +85,7 @@ footer{position:relative;z-index:5;margin-left:64px;border-top:1px solid var(--l
 <div class="edge"><a href="https://app.kelvasy.com">Open Workspace</a><a href="#contact">Request a Quote</a></div>
 <header><a class="logo" href="#top"><img alt="" src="logo.png">Kelvasy</a>
 <nav><a href="#services">Services</a><a href="#why">Why Kelvasy</a><a href="#vendors">Vendors</a><a href="#workspace">Workspace</a><a href="#process">Process</a></nav>
-<a class="btn p" href="#contact">Get a Quote</a></header>
+<div class="header-actions"><a class="email-icon" href="mailto:kelly@bdc.co.zw" aria-label="Email Kelly" title="Email Kelly"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a><a class="btn p" href="#contact">Get a Quote</a></div></header>
 <main id="top">
 <section class="hero" data-sec="top">
 <div class="lab">Networking and systems</div>
