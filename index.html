@@ -83,7 +83,7 @@ footer{position:relative;z-index:5;margin-left:64px;border-top:1px solid var(--l
 /* Kelvasy refresh: calm type, clearer hierarchy, and one consistent layout */
 :root{--bg:#07101c;--panel:#0d1a2b;--blue:#2869e8;--sky:#9bc1ff;--tx:#f3f6fb;--mut:#a8b4c5;--line:rgba(169,194,224,.16);--amber:#ffad70}
 body{font-size:16px;line-height:1.6;background:linear-gradient(180deg,#081220 0%,#07101c 54%,#091321 100%)}
-#bg{opacity:.38}
+#bg{opacity:.58}
 .shade{background:linear-gradient(90deg,rgba(5,13,24,.91),rgba(5,13,24,.55) 54%,rgba(5,13,24,.72)),linear-gradient(180deg,rgba(5,13,24,.3),transparent 45%,#07101c 100%)}
 header{height:76px;padding:12px clamp(24px,6vw,88px);background:rgba(7,16,28,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(169,194,224,.13)}
 .logo{font-size:20px;letter-spacing:-.025em}.logo img{height:28px;width:auto}
@@ -275,14 +275,14 @@ addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-inn
 const reduceMotion=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function waveLayer(base,amplitude,rows,offset,color,glow){
  for(let row=0;row<rows;row++){
-  const lift=row*15, rowPhase=phase+row*.34+offset, step=8;
+  const lift=row*19, rowPhase=phase+row*.34+offset, step=8;
   x.beginPath();
   for(let px=-12;px<=W+12;px+=step){
    const yy=base+lift+Math.sin(px*.006+rowPhase)*amplitude+Math.sin(px*.014-rowPhase*.7)*amplitude*.22+pointerY*13;
    if(px===-12)x.moveTo(px,yy);else x.lineTo(px,yy);
   }
   const grad=x.createLinearGradient(0,0,W,0);grad.addColorStop(0,'rgba(52,116,242,0)');grad.addColorStop(.22,color);grad.addColorStop(.58,glow);grad.addColorStop(.82,color);grad.addColorStop(1,'rgba(52,116,242,0)');
-  x.strokeStyle=grad;x.lineWidth=row===0?1.5:.75;x.globalAlpha=row===0?.8:.42;x.shadowColor=glow;x.shadowBlur=row===0?9:3;x.stroke();x.shadowBlur=0;
+  x.strokeStyle=grad;x.lineWidth=row===0?1.5:.75;x.globalAlpha=row===0?.95:.58;x.shadowColor=glow;x.shadowBlur=row===0?9:3;x.stroke();x.shadowBlur=0;
   for(let px=((row*19+offset*250)%20)-10;px<W;px+=18){
    const yy=base+lift+Math.sin(px*.006+rowPhase)*amplitude+Math.sin(px*.014-rowPhase*.7)*amplitude*.22+pointerY*13;
    const pulse=.5+.5*Math.sin(px*.023+rowPhase*2);
@@ -295,9 +295,9 @@ function waveLayer(base,amplitude,rows,offset,color,glow){
 function drawWaves(){
  phase+=reduceMotion?0:.008;x.clearRect(0,0,W,H);
  const drift=scrollP*H*.12;
- waveLayer(H*.34-drift*.35,26,5,0,'rgba(74,139,255,.48)','rgba(255,168,112,.78)');
- waveLayer(H*.48-drift*.2,38,7,1.2,'rgba(79,147,255,.58)','rgba(255,177,120,.9)');
- waveLayer(H*.68-drift*.12,31,6,2.5,'rgba(66,126,246,.48)','rgba(255,166,111,.68)');
+ waveLayer(H*.31-drift*.35,39,8,0,'rgba(74,139,255,.48)','rgba(255,168,112,.78)');
+ waveLayer(H*.46-drift*.2,54,10,1.2,'rgba(79,147,255,.58)','rgba(255,177,120,.9)');
+ waveLayer(H*.65-drift*.12,44,8,2.5,'rgba(66,126,246,.48)','rgba(255,166,111,.68)');
  if(!reduceMotion)requestAnimationFrame(drawWaves);
 }
 drawWaves();</script></body></html>
