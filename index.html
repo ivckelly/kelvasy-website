@@ -5,10 +5,10 @@
 <link rel="icon" type="image/png" href="logo.png">
 <meta name="description" content="Kelvasy configures MikroTik networks, builds LANs and integrates systems. Works with Ruijie, Ruckus, Fortinet, Cudy and UniFi. Remote workspace at app.kelvasy.com.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#050b1f;--panel:#0a1433;--blue:#1e6eff;--sky:#7fb0ff;--tx:#e9efff;--mut:#93a4c8;--line:rgba(130,165,255,.18)}
-*{box-sizing:border-box;margin:0;font-family:Manrope,"Segoe UI",Arial,sans-serif}html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;font-family:"Source Sans 3","Segoe UI",Arial,sans-serif}html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--tx);font-size:16px;line-height:1.65;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 #bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.7}
@@ -79,6 +79,122 @@ footer{position:relative;z-index:5;margin-left:64px;border-top:1px solid var(--l
 .rv{opacity:0;transform:translateY(24px);transition:.8s}.rv.on{opacity:1;transform:none}
 @media(max-width:900px){#rail,nav{display:none}main,footer{padding-left:0;margin-left:0}header{padding-left:5vw}.tabs,.ws,.ct,.cols{grid-template-columns:1fr}.tl{border-right:0;border-bottom:1px solid var(--line)}.tp{padding:28px 22px}.edge{display:none}section{padding:80px 6vw}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* Kelvasy refresh: calm type, clearer hierarchy, and one consistent layout */
+:root{--bg:#07101c;--panel:#0d1a2b;--blue:#2869e8;--sky:#9bc1ff;--tx:#f3f6fb;--mut:#a8b4c5;--line:rgba(169,194,224,.16);--amber:#ffad70}
+body{font-size:16px;line-height:1.6;background:linear-gradient(180deg,#081220 0%,#07101c 54%,#091321 100%)}
+#bg{opacity:.38}
+.shade{background:linear-gradient(90deg,rgba(5,13,24,.91),rgba(5,13,24,.55) 54%,rgba(5,13,24,.72)),linear-gradient(180deg,rgba(5,13,24,.3),transparent 45%,#07101c 100%)}
+header{height:76px;padding:12px clamp(24px,6vw,88px);background:rgba(7,16,28,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(169,194,224,.13)}
+.logo{font-size:20px;letter-spacing:-.025em}.logo img{height:28px;width:auto}
+nav{gap:clamp(16px,2vw,30px);font-size:14px;color:#bdc8d8}
+nav a{transition:color .2s ease}
+nav a:hover{color:#fff}
+.btn{padding:12px 22px;border-radius:7px;font-size:15px;transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:#2869e8;border-color:#2869e8;box-shadow:0 8px 24px rgba(40,105,232,.18)}
+.btn.p:hover{background:#3979f4;box-shadow:0 10px 28px rgba(40,105,232,.28)}
+.btn.g{background:rgba(13,26,43,.45)}
+.email-icon{border-radius:7px;color:#d4deeb}
+#rail,.edge{display:none}
+main{padding-left:0}
+section{width:min(1200px,calc(100% - 64px));padding:112px 0}
+.hero{min-height:100vh;padding-top:138px;padding-bottom:74px;justify-content:center}
+.lab{font-size:12px;letter-spacing:.14em;color:#b9d2f5;margin-bottom:20px}
+.lab:before{width:24px;background:var(--amber)}
+h1{font-size:clamp(44px,6.4vw,78px);line-height:1.035;letter-spacing:-.035em;font-weight:700;max-width:890px}
+h1 b,h2 b{color:#a9c8ff;font-weight:700}
+h2{font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-.025em;font-weight:700}
+.lead{max-width:610px;font-size:19px;line-height:1.62;color:#b6c2d1;margin-top:22px}
+.cta{gap:14px;margin-top:32px}
+.facts{max-width:1020px;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:64px;border-top:1px solid rgba(169,194,224,.18)}
+.facts div{padding:18px 22px 0 0}
+.facts b{font-size:15px;font-weight:700}
+.facts span{display:block;color:#aab7c8;font-size:14px;line-height:1.5;margin-top:3px}
+.sec-head{margin-bottom:38px}
+.sec-head p{font-size:17px;color:#aebbc9}
+section+section{border-top:1px solid rgba(169,194,224,.08)}
+.tabs{grid-template-columns:290px 1fr;border:1px solid rgba(169,194,224,.16);border-radius:12px;overflow:hidden;background:rgba(12,25,42,.86);box-shadow:0 22px 70px rgba(0,0,0,.16)}
+.tl{border-right:1px solid rgba(169,194,224,.13)}
+.tl button{padding:21px 24px;font-weight:600;color:#b1bece}
+.tl button.on{background:rgba(49,110,220,.16);border-left-color:#80adff}
+.tp{padding:38px 42px}
+.tp h3{font-size:27px;font-weight:700}
+.tp>p{font-size:16px}
+.cols{gap:42px}
+.cols h4{color:#b9d2f5}
+.cols li{border-color:rgba(169,194,224,.12)}
+.why{border:0;gap:14px}
+.why div{border:1px solid rgba(169,194,224,.14);border-radius:10px;background:rgba(12,25,42,.7);padding:28px}
+.why i,.step b{color:#9bc1ff}
+.why h3,.step h3{font-weight:650}
+.ind span{border-radius:999px;background:rgba(12,25,42,.66);padding:9px 16px}
+.vend{border-radius:10px;overflow:hidden}
+.v{background:rgba(12,25,42,.62);transition:color .25s,background .25s,transform .25s}
+.v:hover{background:rgba(40,105,232,.13);transform:translateY(-2px)}
+.note{color:#8291a7}
+.ws{gap:52px}
+.ws p{font-size:17px}
+.url{border-radius:10px;overflow:hidden;background:rgba(12,25,42,.82)}
+.url .bar{background:rgba(255,255,255,.025)}
+.url li{padding:18px 22px;gap:18px}
+.steps{gap:22px}
+.step{padding:22px 18px 8px 0;transition:border-color .25s}
+.step:hover{border-top-color:#91baff}
+.ct{gap:56px}
+.ct p{font-size:17px}
+.ct .d{max-width:460px}
+form{padding:26px;border:1px solid rgba(169,194,224,.14);border-radius:12px;background:rgba(12,25,42,.74)}
+form input,form select,form textarea{background:#0a1727;border-color:rgba(169,194,224,.18);border-radius:7px;padding:14px 15px;font:inherit;color:var(--tx)}
+form input::placeholder,form textarea::placeholder{color:#8d9caf}
+form input:focus,form select:focus,form textarea:focus{border-color:#80adff;box-shadow:0 0 0 3px rgba(128,173,255,.12)}
+form button{font:inherit}
+footer{margin-left:0;padding:28px max(32px,calc((100vw - 1200px)/2));background:transparent}
+.rv{transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.on{transform:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #a9c8ff;outline-offset:3px}
+@media(max-width:900px){
+ header{height:70px;padding:11px 24px}
+ nav{display:none}
+ section{width:min(100% - 44px,680px);padding:82px 0}
+ .hero{min-height:92vh;padding-top:118px;padding-bottom:58px}
+ .facts{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:48px;row-gap:8px}
+ .tabs,.ws,.ct,.cols{grid-template-columns:1fr}
+ .tl{border:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+ .tl button{padding:16px 17px;border-bottom:1px solid var(--line)}
+ .tp{padding:28px 24px}
+ .why{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .vend{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ct{gap:32px}
+ footer{padding:24px}
+}
+@media(max-width:540px){
+ header{padding:10px 18px}.logo{font-size:18px}.logo img{height:25px}
+ .header-actions{gap:8px}.email-icon{width:38px;height:38px}
+ .header-actions .btn{padding:10px 13px;font-size:13px}
+ section{width:calc(100% - 36px);padding:70px 0}
+ .hero{min-height:auto;padding-top:128px;padding-bottom:55px}
+ h1{font-size:clamp(40px,11vw,56px);line-height:1.06}
+ .lead{font-size:17px}
+ .cta{margin-top:26px}
+ .facts{margin-top:42px}
+ .facts div{padding-right:12px}
+ .facts span{font-size:13px}
+ .why{grid-template-columns:1fr}
+ .tl{grid-template-columns:1fr}
+ .tl button{border-right:0}
+ .tp{padding:24px 18px}
+ .cols{gap:22px}
+ .url li{font-size:14px}
+ form{padding:18px}
+ footer{padding:22px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+ .rv{opacity:1;transform:none;transition:none}
+ .btn,.v,.step{transition:none}
+ *{scroll-behavior:auto!important}
+}
+
 </style></head><body>
 <canvas id="bg"></canvas><div class="shade"></div>
 <aside id="rail"><a href="#top" data-s="top">Home</a><a href="#services" data-s="services">Services</a><a href="#why" data-s="why">Why Us</a><a href="#vendors" data-s="vendors">Vendors</a><a href="#workspace" data-s="workspace">Workspace</a><a href="#contact" data-s="contact">Contact</a></aside>
@@ -151,19 +267,37 @@ document.querySelectorAll('[data-sec]').forEach(s=>so.observe(s));
 document.getElementById('f').onsubmit=e=>{e.preventDefault();const g=i=>document.getElementById(i).value;
 location.href='mailto:hello@kelvasy.com?subject='+encodeURIComponent('Quote request: '+g('s'))+'&body='+encodeURIComponent('Name: '+g('n')+'\nPhone: '+g('p')+'\nService: '+g('s')+'\n\n'+g('m'))};
 let sp=0;addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;sp=m>0?scrollY/m:0},{passive:true});
-// isometric cube field (background)
-const c=document.getElementById('bg'),x=c.getContext('2d');let W,H,mx=0,my=0,t=0;
+// Layered particle waves inspired by the supplied reference artwork.
+const c=document.getElementById('bg'),x=c.getContext('2d');let W,H,phase=0,pointerX=0,pointerY=0,scrollP=0;
 function rs(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
-rs();addEventListener('resize',rs);addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
-function cube(px,py,s,h,b){
- x.beginPath();x.moveTo(px,py-h);x.lineTo(px+s,py-h+s/2);x.lineTo(px,py-h+s);x.lineTo(px-s,py-h+s/2);x.closePath();x.fillStyle=`hsla(215,100%,${38+b*42}%,${.5+b*.4})`;x.fill();x.strokeStyle=`rgba(140,190,255,${.15+b*.45})`;x.stroke();
- x.beginPath();x.moveTo(px-s,py-h+s/2);x.lineTo(px,py-h+s);x.lineTo(px,py+s);x.lineTo(px-s,py+s/2);x.closePath();x.fillStyle=`hsla(222,90%,${13+b*20}%,.92)`;x.fill();x.stroke();
- x.beginPath();x.moveTo(px+s,py-h+s/2);x.lineTo(px,py-h+s);x.lineTo(px,py+s);x.lineTo(px+s,py+s/2);x.closePath();x.fillStyle=`hsla(225,95%,${22+b*28}%,.92)`;x.fill();x.stroke()}
-const n=11,list=[];for(let i=-n;i<=n;i++)for(let j=-n;j<=n;j++)list.push([i,j]);list.sort((p,q)=>(p[0]+p[1])-(q[0]+q[1]));
-const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
-function draw(){t+=.011;x.clearRect(0,0,W,H);const s=Math.max(34,Math.min(W,H)/15),ox=W*(.68-sp*.2)+mx*36,oy=H*(.55+sp*.12)+my*26;
- for(const[i,j]of list){const d=Math.hypot(i,j),w=Math.sin(d*.7-t*2+sp*6),h=Math.max(0,(w+1)*.5)*s*1.5+4,px=ox+(i-j)*s,py=oy+(i+j)*s/2-s*.4,b=Math.max(0,1-d/7)*.8+Math.max(0,w)*.25;
-  if(px<-s*2||px>W+s*2||py<-s*3||py>H+s*2)continue;cube(px,py,s*.92,h,Math.min(b,1))}
- if(!rm)requestAnimationFrame(draw)}
-draw();
-</script></body></html>
+rs();addEventListener('resize',rs);addEventListener('pointermove',e=>{pointerX=e.clientX/innerWidth-.5;pointerY=e.clientY/innerHeight-.5},{passive:true});
+addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;scrollP=m>0?scrollY/m:0},{passive:true});
+const reduceMotion=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function waveLayer(base,amplitude,rows,offset,color,glow){
+ for(let row=0;row<rows;row++){
+  const lift=row*15, rowPhase=phase+row*.34+offset, step=8;
+  x.beginPath();
+  for(let px=-12;px<=W+12;px+=step){
+   const yy=base+lift+Math.sin(px*.006+rowPhase)*amplitude+Math.sin(px*.014-rowPhase*.7)*amplitude*.22+pointerY*13;
+   if(px===-12)x.moveTo(px,yy);else x.lineTo(px,yy);
+  }
+  const grad=x.createLinearGradient(0,0,W,0);grad.addColorStop(0,'rgba(52,116,242,0)');grad.addColorStop(.22,color);grad.addColorStop(.58,glow);grad.addColorStop(.82,color);grad.addColorStop(1,'rgba(52,116,242,0)');
+  x.strokeStyle=grad;x.lineWidth=row===0?1.5:.75;x.globalAlpha=row===0?.8:.42;x.shadowColor=glow;x.shadowBlur=row===0?9:3;x.stroke();x.shadowBlur=0;
+  for(let px=((row*19+offset*250)%20)-10;px<W;px+=18){
+   const yy=base+lift+Math.sin(px*.006+rowPhase)*amplitude+Math.sin(px*.014-rowPhase*.7)*amplitude*.22+pointerY*13;
+   const pulse=.5+.5*Math.sin(px*.023+rowPhase*2);
+   x.beginPath();x.arc(px+pointerX*15,yy,1+pulse*1.35,0,Math.PI*2);
+   x.fillStyle=pulse>.8?glow:color;x.globalAlpha=.2+pulse*.55;x.shadowColor=x.fillStyle;x.shadowBlur=pulse>.8?9:3;x.fill();x.shadowBlur=0;
+  }
+ }
+ x.globalAlpha=1;
+}
+function drawWaves(){
+ phase+=reduceMotion?0:.008;x.clearRect(0,0,W,H);
+ const drift=scrollP*H*.12;
+ waveLayer(H*.34-drift*.35,26,5,0,'rgba(74,139,255,.48)','rgba(255,168,112,.78)');
+ waveLayer(H*.48-drift*.2,38,7,1.2,'rgba(79,147,255,.58)','rgba(255,177,120,.9)');
+ waveLayer(H*.68-drift*.12,31,6,2.5,'rgba(66,126,246,.48)','rgba(255,166,111,.68)');
+ if(!reduceMotion)requestAnimationFrame(drawWaves);
+}
+drawWaves();</script></body></html>
