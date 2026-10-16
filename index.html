@@ -42,13 +42,12 @@ body{isolation:isolate;background:var(--base)}
 .workspace-visual{background:#0b1423a6;backdrop-filter:blur(6px);box-shadow:none;border-color:var(--line)}
 .status i{box-shadow:none}.hero-content{max-width:1200px}.hero h1{max-width:1080px;text-wrap:balance}
 .email-icon,.menu-toggle{min-width:44px;min-height:44px}
-.motion-toggle{position:fixed;right:22px;bottom:20px;z-index:30;display:flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:0 16px;background:#080f1de8;border:1px solid #c4d7ee42;border-radius:24px;color:#d9e2ed;font-size:11px;letter-spacing:.03em;cursor:pointer}
-.motion-toggle:hover{border-color:var(--accent);color:var(--accent)}.motion-toggle svg{width:14px;height:14px}.motion-toggle .play-symbol{display:none}.motion-toggle[aria-pressed=true] .pause-symbol{display:none}.motion-toggle[aria-pressed=true] .play-symbol{display:block}
-@media(max-width:700px){.site-film video{object-position:52% center}.site-film:after{background:linear-gradient(90deg,#050b15d9,#070d1788)}.hero h1{font-size:clamp(44px,10.4vw,76px)}.motion-toggle{right:15px;bottom:15px}.hero-foot{bottom:76px}.field input,.field select,.field textarea{font-size:16px}footer{padding-bottom:82px}}
+
+@media(max-width:700px){.site-film video{object-position:52% center}.site-film:after{background:linear-gradient(90deg,#050b15d9,#070d1788)}.hero h1{font-size:clamp(44px,10.4vw,76px)}.field input,.field select,.field textarea{font-size:16px}}
 body.motion-paused *,body.motion-paused *:before,body.motion-paused *:after{animation-play-state:paused!important}
 @media(prefers-reduced-motion:reduce){.site-film video{opacity:0}}
 
-</style></head><body><div class="site-film" aria-hidden="true"><video id="background-film" muted loop playsinline preload="none" poster="console-background.png"><source data-src="network-motion.mp4" type="video/mp4"></video></div><button class="motion-toggle" type="button" aria-label="Pause background motion" aria-pressed="false"><svg class="pause-symbol" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2h3v12H4zm5 0h3v12H9z"/></svg><svg class="play-symbol" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m4 2 10 6-10 6z"/></svg><span>Pause motion</span></button><a class="skip" href="#main">Skip to content</a>
+</style></head><body><div class="site-film" aria-hidden="true"><video id="background-film" muted loop playsinline preload="none" poster="console-background.png"><source data-src="network-motion.mp4" type="video/mp4"></video></div><a class="skip" href="#main">Skip to content</a>
 <header><a class="brand" href="#top" aria-label="Kelvasy home"><img src="logo.png" alt="">KELVASY</a><nav class="nav" aria-label="Main navigation"><a href="#services">Services</a><a href="#approach">Our approach</a><a href="#workspace">Console</a><a href="#contact">Contact</a></nav><div class="header-actions"><a class="email-icon" href="mailto:kelly@bdc.co.zw" aria-label="Email Kelly" title="Email Kelly"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a><button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button></div><nav class="menu-panel" id="menu" aria-label="Quick navigation" hidden><a href="#services">Explore services</a><a href="#approach">Our approach</a><a href="#workspace">Kelvasy Console</a><a href="#contact">Start a conversation</a><a href="https://app.kelvasy.com">Open Console ↗</a></nav></header>
 <main id="main"><section class="hero" id="top" aria-labelledby="hero-title"><div class="living-image" aria-hidden="true"></div><canvas id="energy" aria-hidden="true"></canvas><div class="hero-content"><p class="eyebrow">Networks & systems · Connected possibilities</p><h1 id="hero-title">Beyond connections.<br>Built for <em>possibility.</em></h1><div class="fine-line"></div><p class="hero-copy">From your first connection to your entire infrastructure. We design, connect and secure the networks and systems that move your business forward.</p><a class="circle-link" href="#services"><span class="circle" aria-hidden="true">→</span>Explore what we do</a></div><div class="hero-foot"><a class="scroll-link" href="#overview"><span class="scroll-line" aria-hidden="true"></span>Scroll to discover</a><div class="signature">Independent thinking.<span>End-to-end networking.</span></div></div></section>
 <section class="section intro" id="overview"><div><span class="section-num">01 / The bigger picture</span><p class="eyebrow">Connected by design</p></div><div><h2>Your whole network.<br><span class="muted">Working as one.</span></h2><p>People, places, devices and applications. A network is the connection between them all. Kelvasy brings the full environment together, from on-site infrastructure and wireless connectivity to remote sites, cloud services and business systems.</p><p>We work across technologies and vendors, choosing the right fit for your environment, your goals and what comes next.</p></div></section>
@@ -68,19 +67,15 @@ body.motion-paused *,body.motion-paused *:before,body.motion-paused *:after{anim
 document.getElementById('year').textContent=new Date().getFullYear();
 const menuButton=document.querySelector('.menu-toggle'),menu=document.getElementById('menu');function closeMenu(){menu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation menu')}menuButton.addEventListener('click',()=>{const open=menu.hidden;menu.hidden=!open;menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu')});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden){closeMenu();menuButton.focus()}});document.addEventListener('click',e=>{if(!menu.hidden&&!menu.contains(e.target)&&!menuButton.contains(e.target))closeMenu()});
 document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value;location.href='mailto:kelly@bdc.co.zw?subject='+encodeURIComponent('Kelvasy enquiry: '+v('service'))+'&body='+encodeURIComponent('Name: '+v('name')+'\nContact: '+v('reply')+'\nService: '+v('service')+'\n\n'+v('message'))});
-// The supplied film is decorative: silent, pausable, and respectful of motion preferences.
-const film=document.getElementById('background-film'),motionButton=document.querySelector('.motion-toggle'),reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
-let pausedByUser=reduceMotion.matches||Boolean(navigator.connection&&navigator.connection.saveData),filmLoaded=false;
+// Keep the decorative film silent and respect device motion/data preferences.
+const film=document.getElementById('background-film'),reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+let filmLoaded=false;
 function updateFilm(){
- document.body.classList.toggle('motion-paused',pausedByUser);
- motionButton.setAttribute('aria-pressed',String(pausedByUser));
- motionButton.setAttribute('aria-label',pausedByUser?'Play background motion':'Pause background motion');
- motionButton.querySelector('span').textContent=pausedByUser?'Play motion':'Pause motion';
- if(pausedByUser||document.hidden){film.pause();return}
+ const stop=reduceMotion.matches||Boolean(navigator.connection&&navigator.connection.saveData)||document.hidden;
+ if(stop){film.pause();return}
  if(!filmLoaded){const source=film.querySelector('source');source.src=source.dataset.src;film.load();filmLoaded=true}
- film.muted=true;film.play().catch(()=>{pausedByUser=true;updateFilm()});
+ film.muted=true;film.play().catch(()=>{});
 }
-motionButton.addEventListener('click',()=>{pausedByUser=!pausedByUser;updateFilm()});
-reduceMotion.addEventListener('change',e=>{pausedByUser=e.matches;updateFilm()});
+reduceMotion.addEventListener('change',updateFilm);
 document.addEventListener('visibilitychange',updateFilm);updateFilm();
 </script></body></html>
